@@ -1,6 +1,6 @@
->>>>>>> HEAD
+<<<<<<< HEAD
 =======
->>>>>>> HEAD
+<<<<<<< HEAD
 >>>>>>> d0ad1ffaa16eaba76abda81a6bda234ce9ecb680
 # README
 
