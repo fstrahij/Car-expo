@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong> name:</strong>
+  <%= @expo.name %>
+</p>
+
+<p>
+  <strong>Place:</strong>
+  <%= @expo.place %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @expo.date %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @expo.image_url %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @expo.description %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @expo.active %>
+</p>
+
+<%= link_to 'Edit', edit_expo_path(@expo) %> |
+<%= link_to 'Back', expos_path %>
