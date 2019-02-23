@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190222195618) do
+ActiveRecord::Schema.define(version: 20190222192859) do
 
   create_table "expos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20190222195618) do
     t.integer "role_id", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email", "user_name"], name: "index_users_on_email_and_user_name", unique: true
   end
 
 end
