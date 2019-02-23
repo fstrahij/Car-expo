@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(version: 20190222195618) do
     t.string "first_name"
     t.string "last_name"
     t.string "user_name"
-    t.string "password"
+    t.string "password_digest"
     t.string "email"
     t.boolean "active", default: true
-    t.integer "role_id", default: 0
+    t.integer "role_id", default: 1
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email", "user_name"], name: "index_users_on_email_and_user_name", unique: true
