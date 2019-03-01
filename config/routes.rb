@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   resources :users
   root 'static_pages#home'
   get '/expoes', to: 'expos#index'
-  get '/signup', to: 'users#new'
+  get '/signup', to: 'users#new'  
+  get '/users', to: 'users#index'
   get '/about', to: 'static_pages#about'
   get '/home', to: 'static_pages#home'
   get '/login', to: 'sessions#new'  
