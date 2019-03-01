@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
   		if params[:session][:remember_me] == '1' 
   			remember(user)
   		end
-  		redirect_to user
+  		redirect_back_or user
   	else
   		flash.now[:danger] = "Invalid user name or password"
   		render 'new'
