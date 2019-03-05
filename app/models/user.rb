@@ -1,5 +1,7 @@
 class User < ApplicationRecord
-	attr_accessor :remember_token
+	attr_accessor :remember_token, :activation_token
+	before_create :create_activation_digest
+
 	validates :first_name, presence: true, length: { maximum: 30 }
 	validates :last_name, presence: true, length: { maximum: 50 }
 	validates :user_name, presence: true, uniqueness: true, length: { minimum: 8, maximum: 30 }
@@ -31,4 +33,10 @@ class User < ApplicationRecord
 	def forget
 		update_attribute(:remember_digest, nil)
 	end
+
+	private
+		def create_activation_digest
+			self.activation_token = User.new_token
+			self.activation_digest = User.digest(activation_token)
+		end 
 end

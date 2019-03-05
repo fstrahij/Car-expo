@@ -10,7 +10,9 @@
  			user_name: user_name, 
  			email: email, 
  			password: password, 
- 			password_confirmation: password)
+ 			password_confirmation: password,
+ 			active: true,
+ 			activated_at: Time.zone.now)
  end
 
 # This file should contain all the record creation needed to seed the database with its default values.
